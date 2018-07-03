@@ -1,6 +1,7 @@
 FROM arm32v7/python:3.7.0b5-slim-stretch
 
-RUN apt update && apt -y upgrade                            && \
+RUN apt update                                              && \
+    apt -y upgrade                                          && \
     apt -y install pandoc                                   && \
     apt -y install libxml2-dev libxslt-dev                  && \
     apt -y install libblas-dev liblapack-dev                && \
