@@ -1,5 +1,5 @@
-FROM arm32v7/python:3.7.0b5-slim-stretch
+FROM arm32v7/python:2.7.14-slim-stretch
 
-RUN apt-get update
-
-CMD [ "uname ", "-a" ]
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends g++ && \
+    apt-get clean
