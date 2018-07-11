@@ -12,4 +12,4 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends libnetcdf-dev && \
     apt-get install -y --no-install-recommends python3-pip && \
     apt-get install -y --no-install-recommends python3-venv && \
-    apt-get install -y --no-install-recommends libzmq3-dev &&
+    apt-get install -y --no-install-recommends libzmq3-dev
