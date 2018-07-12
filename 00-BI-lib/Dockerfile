@@ -1,7 +1,8 @@
 FROM arm32v7/python:3.7.0b5-slim-stretch
 
 RUN apt-get update && \
-    apt-get install -y  apt-utils pandoc  && \
+    apt-get install -y  apt-utils &&\
+    apt-get install -y  pandoc  && \
     apt-get install -y  libxml2-dev libxslt-dev && \
     apt-get install -y  libatlas-base-dev gfortran && \
     apt-get install -y  llibtiff5-dev libjpeg62-turbo-dev && \
