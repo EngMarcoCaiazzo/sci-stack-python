@@ -5,7 +5,7 @@ RUN apt-get update && \
     apt-get install -y  --no-install-recommends pandoc  && \
     apt-get install -y  --no-install-recommends libxml2-dev libxslt-dev && \
     apt-get install -y  --no-install-recommends libatlas-base-dev gfortran && \
-    apt-get install -y  --no-install-recommends llibtiff5-dev libjpeg62-turbo-dev && \
+    apt-get install -y  --no-install-recommends libtiff5-dev libjpeg62-turbo-dev && \
     apt-get install -y  --no-install-recommends zlib1g-dev libfreetype6-dev liblcms2-dev && \
     apt-get install -y  --no-install-recommends libwebp-dev tcl8.5-dev tk8.5-dev && \
     apt-get install -y  --no-install-recommends libharfbuzz-dev libfribidi-dev && \
