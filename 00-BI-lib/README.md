@@ -1,4 +1,4 @@
-docker build https://github.com/EngMarcoCaiazzo/sci-stack-python.git#master:00-BI-lib -t base:3.7.0b5-slim-stretch
+docker build https://github.com/EngMarcoCaiazzo/sci-stack-python.git#master:00-BI-lib -t base:3.6-slim
 
 
 to improve
