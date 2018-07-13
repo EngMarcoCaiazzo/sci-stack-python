@@ -1,4 +1,4 @@
-FROM mc75/base:3.7.0b5-slim-stretch
+FROM mc75/base:3.6-slim
 
 RUN apt-get update && \
     apt-get install -y  --no-install-recommends libjasper libjasper-dev &&\
