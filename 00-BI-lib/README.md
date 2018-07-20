@@ -11,9 +11,3 @@ debconf: falling back to frontend: Teletype
 dpkg-preconfigure: unable to re-open stdin:
 
 https://github.com/phusion/baseimage-docker/issues/58
-
-
-to add:
-python3-dev
-g++
-libxslt1-dev
