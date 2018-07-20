@@ -1,3 +1,5 @@
+docker build https://github.com/EngMarcoCaiazzo/sci-stack-python.git#master:01-BI-python-opencv-headless -t base-opencv-headless:3.6-slim
+
 # dependencies for python-opencv-headless
 #------------------------------------------------------
 apt -y install libjasper libjasper-dev
