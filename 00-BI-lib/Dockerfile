@@ -1,4 +1,4 @@
-FROM arm32v7/python:3.6-slim
+FROM arm32v7/python:3.5-stretch
 
 RUN apt-get update && \
     apt-get install -y  --no-install-recommends apt-utils \
