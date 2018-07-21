@@ -1,4 +1,4 @@
-FROM mc75/base:3.6-slim
+FROM mc75/base:3.5-slim
 
 RUN pip install alabaster==0.7.11 \
     altair==2.1.0 \

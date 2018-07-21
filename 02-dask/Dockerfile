@@ -1,4 +1,4 @@
-FROM mc75/base:3.5-stretch
+FROM mc75/base:3.5-slim
 
 RUN pip install --no-cache-dir \
     Cython==0.28.4 \
