@@ -1,9 +1,9 @@
-FROM arm32v7/python:3.5-stretch
+FROM arm32v7/python:3.5-slim
 
 RUN apt-get update && \
     apt-get install -y  --no-install-recommends apt-utils \
     pandoc \
-    libxml2-dev libxslt-dev libxslt1-dev  \
+    libxml2-dev libxslt-dev \
     libatlas-base-dev gfortran g++ \
     libtiff5-dev libjpeg62-turbo-dev \
     zlib1g-dev libfreetype6-dev liblcms2-dev \
@@ -11,6 +11,6 @@ RUN apt-get update && \
     libharfbuzz-dev libfribidi-dev \
     libhdf5-dev \
     libnetcdf-dev \
-    python3-dev python3-pip \
+    python3-pip \
     libzmq3-dev \
  && rm -rf /var/lib/apt/lists/*
