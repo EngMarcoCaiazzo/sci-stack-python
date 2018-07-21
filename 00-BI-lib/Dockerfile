@@ -11,6 +11,6 @@ RUN apt-get update && \
     libharfbuzz-dev libfribidi-dev \
     libhdf5-dev \
     libnetcdf-dev \
-    python3-pip \
+#    python3-pip \
     libzmq3-dev \
  && rm -rf /var/lib/apt/lists/*
