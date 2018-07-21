@@ -12,5 +12,5 @@ RUN apt-get update && \
     libhdf5-dev \
     libnetcdf-dev \
     python3-dev python3-pip \
-    libzmq3-dev
- && rm -rf /var/lib/apt/lists/* 
+    libzmq3-dev \
+ && rm -rf /var/lib/apt/lists/*
