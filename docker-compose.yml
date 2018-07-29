@@ -3,7 +3,7 @@ version: "3"
 services:
 
   dscheduler:
-    image: mc75/dask:3.6-slim
+    image: mc75/jupyter:v0.2
     ports:
      - "8786:8786"
      - "9786:9786"
@@ -19,7 +19,7 @@ services:
         constraints: [node.role == manager]
 
   dworker:
-    image: mc75/dask:3.6-slim
+    image: mc75/jupiter:v0.2
     command: dask-worker dscheduler:8786
     environment:
       - "affinity:container!=dworker*"
@@ -31,6 +31,22 @@ services:
       replicas: 2
       restart_policy:
         condition: on-failure
+
+  notebook:
+    image: mc75/jupiter:v0.2
+    command: juputer lab --allow-root --ip=0.0.0.0 --port=8888
+    networks:
+      - distributed
+    hostname: notebook
+    ports:
+      - "8888:8888"
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+      placement:
+        constraints: [node.role == manager]
+
 
 networks:
   distributed:
