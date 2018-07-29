@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+
+  dscheduler:
+    image: mc75/dask:3.6-slim
+    ports:
+     - "8786:8786"
+     - "9786:9786"
+     - "8787:8787"
+    command: dask-scheduler
+    networks:
+      - distributed
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+      placement:
+        constraints: [node.role == manager]
+
+  dworker:
+    image: mc75/dask:3.6-slim
+    command: dask-worker dscheduler:8786
+    environment:
+      - "affinity:container!=dworker*"
+    networks:
+      - distributed
+    depends_on:
+      - dscheduler
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: on-failure
+
+networks:
+  distributed:
