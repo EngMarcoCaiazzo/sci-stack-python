@@ -19,7 +19,7 @@ services:
         constraints: [node.role == manager]
 
   dworker:
-    image: mc75/jupiter:v0.2
+    image: mc75/jupyter:v0.2
     command: dask-worker dscheduler:8786
     environment:
       - "affinity:container!=dworker*"
@@ -33,8 +33,8 @@ services:
         condition: on-failure
 
   notebook:
-    image: mc75/jupiter:v0.2
-    command: juputer lab --allow-root --ip=0.0.0.0 --port=8888
+    image: mc75/jupyter:v0.2
+    command: jupyter lab --allow-root --ip=0.0.0.0 --port=8888
     networks:
       - distributed
     hostname: notebook
